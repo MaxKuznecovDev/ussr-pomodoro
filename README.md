@@ -1,4 +1,4 @@
-<h1 align="center">The timer USSR-POMODORO</h1>
+<h1 align="center">The USSR-POMODORO timer</h1>
 
 <h2 align="center"><a  href="http://r90689we.beget.tech/">Live Demo</a></h2>
 
