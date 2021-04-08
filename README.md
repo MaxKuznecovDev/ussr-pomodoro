@@ -16,9 +16,16 @@ USSR-POMODORO provides a simple, but effective, UI to manage these periods of fo
 1. Decide on the task that you will perform.
 2. Set the timer "Time" required for work.
 3. Work without distraction until the timer rings.
-4. Take a short break (time to tune with the "Little Break" twist).
-5. After each end of all working cycles, take a long break (time to adjust with the "Big Break" twist).
+4. Take a short break (time to tune with the "Little Break" handle).
+5. After each end of all working cycles, take a long break (time to adjust with the "Big Break" handle).
 6. Cycles adjust the number of work periods before the big break.
+
+
+## Possible conflicts when running code
+If you see handles not showing in the app, check your console:
+"Access to script at '...app/js/main.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, chrome-untrusted, https"
+
+You must run the application using a web server (Apache, Nginx)!
 
 ## Technology stack
 
