@@ -1,0 +1,28 @@
+
+@font-face {
+    font-family: 'Captureit';
+    src: url('../src/fonts/captureit-webfont.woff2')format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+
+}
+
+@font-face {
+    font-family: "Stamper_Bold";
+    src: url('../src/fonts/stamper_bold-webfont.woff2')format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+
+
+
+@font-face {
+    font-family: "soviet";
+    src: url('../src/fonts/soviet-webfont.woff2') format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}

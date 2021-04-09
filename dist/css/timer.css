@@ -1,0 +1,67 @@
+body{
+    background: url("../src/img/concrete.jpg");
+
+}
+.bg{
+    display: inline-block;
+    background: url("../src/img/wires.png") no-repeat;
+    background-position: center,center;
+}
+.timerPomodoro
+{
+    min-width: 700px;
+    max-width: 1900px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.wrapperTimer
+{
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+
+}
+.deactivate{
+    opacity: 0.5;
+}
+.styleDisplayText{
+    color: #2b8e00;
+    letter-spacing: 5px;
+    font-family:"Captureit",'Tahoma','sans-serif';
+}
+.styleInscriptionOfDisplay{
+    font-family:"Stamper_Bold",'Arial Black','sans-serif';
+}
+.styleInscriptionOfCheckSound{
+    font-family:"Stamper_Bold",'Arial Black','sans-serif';
+}
+.styleInscriptionOfCircleSlider{
+    font-family:"Captureit",'Tahoma','sans-serif';
+    font-size: 18px;
+}
+
+button{
+    font-family:"soviet",'Trebuchet MS','sans-serif';
+    background: linear-gradient(to top, #3a3a3a , #8c8b8b);
+    border: 1px solid white;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.1s;
+    box-shadow:  0 0 5px #000000;
+
+}
+
+.styleTextHidden{
+    font-family:"Captureit";
+}
+.footerTimerSubscription p{
+    font-size: 70px;
+    font-family: "Stamper_Bold",'Arial Black','sans-serif';
+    opacity: 0.6;
+
+}
+.authors{
+
+    font-size: 30px;
+    font-family:"soviet",'Trebuchet MS','sans-serif';
+}

@@ -1,0 +1,203 @@
+{
+//  https://eslint.org/docs/rules/ - тут валяються все настройки
+    "env": {
+    "browser": true,
+        "es6": true,
+        "node": true
+},
+//  "extends": "eslint:recommended", // включены рекомендованные правила которые сообщают о частых ощшибках
+    "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+    },
+
+    "rules": {
+    "indent": [2, 4 , {
+     "SwitchCase": 1,
+     "VariableDeclarator" : "first",
+     "MemberExpression": 1,
+     "FunctionDeclaration": {"body": 1},
+     "FunctionExpression": {"body": 1},
+     "ArrayExpression": "first",
+     "ObjectExpression":"first"
+    }
+    ],
+    "comma-spacing":[ 2,{ "before": true, "after": true }],
+    "strict": [2, "global"],
+    "for-direction": [2], //смотрет что бы мы не свалились в вечный цикл в fore
+    "getter-return": [2, { "allowImplicit": true }], // геттерное свойство должно либо возвращать явное значение, либо явно возвращать undefined
+     "no-cond-assign": [2, "always"],   // запрещает в условиях операто =
+     "no-debugger": [2],
+     "no-dupe-args": [2], //запрещает дублировать параметры в функции
+     "no-dupe-else-if": [2],
+     "no-dupe-keys": [2],
+     "no-duplicate-case": [2] ,// запрещает дубливровать case в switch
+     "no-empty": [2, { "allowEmptyCatch": true }],//запрещает пустые блоки кода
+     "no-ex-assign": [2],//запрещает менять в cathe объект ошибки
+     "no-extra-boolean-cast": [2],//запрещает использовать !!! и т.д.
+     "no-extra-semi": [2], // убирает повторяющиеся точки с запятой
+     "no-func-assign": [2], // не разрешает дублировать декларации функций
+     "no-import-assign": [2], //запрешает переназначать переменные прописанные в import
+     "no-inner-declarations": [2, "both"], // запрещает дкларировать функции и var  внутри if
+     "no-invalid-regexp": [2, { "allowConstructorFlags": ["u", "y"] }],
+     "no-irregular-whitespace":[2],//запрещает в коде управляющие символы
+     "no-misleading-character-class":[2],
+     "no-obj-calls":[2],//запроещает вызывать глобальные объекты
+     "no-prototype-builtins" :[2],//запрещает вызов методов Object.prototype в неявном виде
+     "no-regex-spaces":[2],
+     "no-setter-return": [2], //запрещает возвращать значения из сеттеров
+     "no-sparse-arrays": [2], //запрещает масивы вот такие [,,]
+     "no-unexpected-multiline": [2], //запрещает выражения размазывать на несколько строк
+     "no-unreachable": [2], //запрещает код после return и подобных ...
+     "no-unsafe-finally":[2],//запрещает  return, throw, break, and continue в finally
+     "no-unsafe-negation":[2], // запрещает  if (!key in object)
+     "use-isnan":[2],
+     "valid-typeof":[2, { "requireStringLiterals": true }],// incorrect typeof foo === "strnig"; correct typeof foo === "string"
+     "array-callback-return": [2, { "allowImplicit": true }], //из методов масива явно возвращай чего нибудь
+     "block-scoped-var": [2], // пиши var с учетом хойстинга, в if их не засовывай, они хойстятся от туда и это не явно может тебя тормознуть
+     "complexity": [2, 3], // цикломатическая сложность функции - максимальное колличество вариантов ветвления функции
+     "curly": [2], // необходимо использовать фигурные скобки в условиях
+     "default-param-last": [2], // параметры по умолчанию должны идти последними
+     "dot-location": [2, "property"], // точка была на одно линии с объектом, свойство переносится на след строку - и точка и свойство на новой строке
+     "dot-notation": [2], //запрещает доступ к свойству через obj["bla"] и переводит такую нотацию в точечную obj.bla
+     "eqeqeq": [2, "always"], // требует всегда юзать === вместо ==
+     "grouped-accessor-pairs": [2], // группируем сетторы и геттеры рядом друг с другом
+     "max-classes-per-file": [2, 1], //определяет максимальное число class defenition на один файл
+     "no-caller": [2], // запрещает использоваьть метод caller
+     "no-case-declarations":[2], //запрещает лексические дикларации внутри swich  - case, defaulft
+     "no-else-return": [2], //запрещает корявые returnы в else  и else if
+     "no-empty-function": [2],//запрещает пустые функции без коментариев
+     "no-empty-pattern": [2], //запрещает пустую деструктуризацию
+     "no-eq-null": [2], // предупреждает о не строгом сравнении null с чем либо
+     "no-eval": [2],
+     "no-extra-bind":[2], // убирает ненужные баинды
+     "no-extra-label": [2], // убирает ненужные метки
+     "no-fallthrough" : [2], // предупреждает о возможных ошибках в case
+     "no-floating-decimal": [2], // запрещает цифры с плавающей точкой
+     "no-global-assign": [2], // запрещает переприсваивание нативных объектов и нативных глобальных пременных
+     "no-implicit-coercion": [2], // запрещает неявное преобразование данных например var s = "" + foo; переделает в var s = String(foo);
+     "no-magic-numbers": [2, { "ignore": [0,1,2],"ignoreArrayIndexes": true, "enforceConst": true }], // запрещает использовать магические числа
+     "no-multi-spaces": [2], // удаляет лишние пробелы
+     "no-multi-str": [2], //  запрещает мультистрочные строки
+     "no-new": [2], // запрещает new без сохранения результата в переменную
+     "no-octal": [2], //запрещает восмиричные литералы
+     "no-redeclare": [2], // запрещает использовать редикларацию
+     "no-script-url": [2], // запрещает юзать javascript:
+     "no-self-assign":  [2],// запрещает самоприсваивание а=а
+     "no-self-compare": [2], // запрещает самосравнение а===а
+     "no-throw-literal": [2], // оператором throw выбразываем только объект ошибки
+     "no-unused-labels": [2], // запрещает использование неиспользуемых меток
+     "no-useless-catch": [2], //запрещает не нужные catch
+     "no-useless-return":[2], //запрещает пустые return
+     "wrap-iife": [2, "any"], //оборачивает самовызывайки
+     "yoda": [2], // запрещает использовать yoda stile
+     "no-delete-var": [2], // запрещает удалять пременные при помощи delet
+     "no-undef-init": [2],// запрещает инициализировать пременные undefined
+     "no-use-before-define": [2, { "functions": false}] , //запрещает объявление переменных и классов после их использования
+     "array-bracket-spacing": [2, "always"], // ставит пробелы в начале и конце []
+     "array-element-newline": [2, { "multiline": true, "minItems": 5 }], // переносит элементы массива на новую строку
+     "block-spacing": [2], // ставит пробелы в начале и конце {}
+     "brace-style": [2, "stroustrup"], // стиль написания блоков кода
+     "camelcase": [2], //требует везде камелкейс
+     "comma-dangle": [2, {
+      "arrays": "never",
+      "objects": "always",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+     }], // ставит запятую после последнего свойства в объекте и в других штуках
+     "comma-style": [2, "last"], // правила расстановки запяых в строках
+     "computed-property-spacing": [2, "always"], //ставит пробелы вокруг свойства, которое вычисляется
+     "consistent-this": [2, "self"], //сохраняем значение this только в переменную self
+     "func-call-spacing": [2, "never"],//убирает пробел между идетификатором функции и ее вызовом
+     "function-call-argument-newline": [2, "never"],//запрещает перенос аргументов внутри вызова функции на новые строки
+     "function-paren-newline": [2, "never"],//запрещает перенос параметров внутри объявления функции на новые строки
+     "implicit-arrow-linebreak": [2, "beside"], // выстраивает стрелочную функцию без {} в одну линию
+     "object-property-newline":[2], // выстраивает свойства в объекте с новой строки
+     "object-curly-newline": [2, "always"], // переносит первое и последнее свойство объекта на новую строчку, отделяя его от скобочки
+     "jsx-quotes": [2, "prefer-double"], // определяет какие ковычки использвать в атрибутах jsx
+     "key-spacing": [2, {
+      "align": {
+       "beforeColon": true,
+       "afterColon": true,
+       "on": "colon"
+      }
+     }], // определяет пробелы до и после двоеточия в объектных литералах и выравнивание
+     "keyword-spacing": [2, { "after": true,
+                              "before": true
+     }], // добавляет или удаляет пробелы вокруг ключевых слов(if, else, as .....)
+     "line-comment-position": [2, { "position": "beside" }], // одиночные коментарии над кодом или возле
+     "linebreak-style": [2, "windows"], // задает управляющий символ переноса строки
+     "lines-around-comment": [2, {
+      "afterBlockComment": true,
+      "afterLineComment": true,
+      "allowBlockStart": true,
+      "allowObjectStart": true,
+      "allowArrayStart": true,
+      "allowClassStart": true
+     }], // правило расположения комментариев
+     "lines-between-class-members": [2, "always"], // делает пренос строки между членами класса
+     "multiline-comment-style": [2, "separate-lines"], // задает коментарии  с помощью "//"
+     "multiline-ternary": [2, "always"], // в тернарных выражениях второй операд переносит на новую линию
+     "new-cap": [2, { "newIsCap": true }], // требует функцию с большой буквы перед new
+     "new-parens":[2],// ставит () в вызове через new
+     "newline-per-chained-call": [2, { "ignoreChainWithDepth": 2 }], // перенос строки при чейнинге
+     "no-lonely-if": [2], //убирает одинокие if  в нутри else
+     "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 1, "maxBOF": 1 }], //задает колличество переносов строки между кодом
+     "no-trailing-spaces":[2],// убирает лишние пробелы в конце строки
+     "no-whitespace-before-property":[2],// убирает лишние пробелы после свойств объекта
+     "nonblock-statement-body-position": [2, "beside"],// в утверждениях if, else, while, do-while, and for  ставит в одну строку однострочное тело утверждения
+     "object-curly-spacing": [2, "always"], // раставляет пробелы внутри фигурных скобок
+     "padded-blocks": [2, "always"], // ставит перенос строки в начале и конце блока - {}
+     "prefer-exponentiation-operator": [2], // заменяет Math.pow на **
+     "padding-line-between-statements": [
+      2,
+      { "blankLine": "always" , "prev": "block", "next": "*" },
+      { "blankLine": "always" , "prev": "block-like", "next": "*" },
+      { "blankLine": "always" , "prev": "class", "next": "*" },
+      { "blankLine": "any" , "prev": "class", "next": "*" },
+      { "blankLine": "any" , "prev": "class", "next": "function" },
+      { "blankLine": "any" , "prev": "const", "next": "*" },
+      { "blankLine": "always" , "prev": "directive", "next": "*" },
+      { "blankLine": "always" , "prev": "for", "next": "*" },
+      { "blankLine": "any" , "prev": "function", "next": "*" },
+      { "blankLine": "any" , "prev": "import", "next": "*" },
+      { "blankLine": "any" , "prev": "let", "next": "*" },
+      { "blankLine": "always" , "prev": "throw", "next": "*" },
+      { "blankLine": "any" , "prev": "var", "next": "*" }
+     ], // раставляет пустые строки между разными statements и expresions
+     "quotes": [2, "double", { "avoidEscape": true,"allowTemplateLiterals": true }],//все ковычки заменяет на двойные за исключением `
+     "semi": [2, "always"], //ставит точку с запятой после всех утрверждений
+     "semi-spacing": [2, { "before": false, "after": true }], // устанваливает пробелы после точки запятой
+     "semi-style": [2, "last"], // ставит точку с запятой в начале строки
+     "space-before-blocks": [2], // статвит пробелы между {} и всеми конструкциями кроме keywords
+     "space-in-parens": [2, "always"], // добавляет пробелы внутри круглых скобочек
+     "space-infix-ops": [2], // устанавливает пробелы вокруг операторов
+     "spaced-comment": [2, "always"], //ставит пробелы в начале коментария
+     "switch-colon-spacing": [2, {"after": true, "before": true}], // ставит пробелы вокруг двоеточие в switch
+     "template-tag-spacing": [2, "always"], //ставит пробелы между шаблонным тегом и его литералом
+     "arrow-parens": [2, "always"], // ставит круглые скобки вокруг аргументов стрелочной функции
+     "arrow-spacing": [2, { "before": true, "after": true }], //ставит пробелы вокруг срелки в стрелочной функции
+     "constructor-super":[2],// требует super в конструкторах производных классов
+     "generator-star-spacing": [2, {"before": true, "after": true}], // раставляет пробелы вокруг * в функциях генераторов
+     "no-confusing-arrow": [2, {"allowParens": true}], //в двояких ситуациях связанных с стрелочной функцией и оператором сравнения ставит скобки
+     "no-const-assign": [2], // выбрасывает предупреждение если переписываешь значение константы
+     "no-dupe-class-members": [2], // выбрасывает предупреждение если переобъявляешь членны класса
+     "no-new-symbol": [2], // выбрасывает предупреждение если вызываешь Symbol через new
+     "no-useless-computed-key": [2, { "enforceForClassMembers": true }],//исправляет ненужные вычислянеия свойств в объектах и классах
+     "no-useless-rename":[2], // удаляем одинаковое переименовывание в импортах, экспортах и диструктурированхы присваиваниях
+     "no-var":[2], // запрещает var и  переводит их в const, let
+     "object-shorthand": [2, "always"], // задается сокращенный синтаксис в объявлении методах и свойств в объектных литералах
+     "prefer-const":[2], // заменяет вместо let на const, если let на протяжении всей программы не переназначается
+     "prefer-destructuring": [2, {
+      "array": true,
+      "object": true
+     }, {
+      "enforceForRenamedProperties": true
+     }], // переписывает все на диструктуризацию
+     "prefer-template":[2], // заменяет конкотенацию строк на шаблонные литералы
+     "rest-spread-spacing": [2], //убирает пробел между спред и ресто оператором и именем переменной
+     "template-curly-spacing": [2, "always"]//ставит пробелы в шаблоных литералах внутри фигурных скобок между скобками и выражениями
+     //the end =) 17.04.2020
+    }
+}
